@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import axios from "axios";
 import { useRouter } from 'next/router'
 
-const loginForm = () => {
+const Loginform = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [firstName,setFirstName] = useState("")
     const router = useRouter()
 
-    const handleSubmit = async(e) => {
+    const handleSubmit = async(e:any) => {
         e.preventDefault();
         console.log("email",email)
         console.log("password",password)
@@ -53,7 +53,7 @@ const loginForm = () => {
                     <input
                         type="text"
                         value={firstName}
-                        onChange={(e) => setFirstName(e.target.value)}
+                        onChange={(e:any) => setFirstName(e.target.value)}
                         required
                         style={{ marginBottom: '16px' }}
                     />
@@ -63,7 +63,7 @@ const loginForm = () => {
                     <input
                         type="email"
                         value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        onChange={(e:any) => setEmail(e.target.value)}
                         required
                         style={{ padding: '8px', marginBottom: '16px' }}
                     />
@@ -73,7 +73,7 @@ const loginForm = () => {
                     <input
 
                         value={password}
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={(e:any) => setPassword(e.target.value)}
                         required
                         style={{ marginBottom: '16px' }}
                     />
@@ -97,4 +97,4 @@ const loginForm = () => {
     );
 };
 
-export default loginForm;
+export default Loginform;

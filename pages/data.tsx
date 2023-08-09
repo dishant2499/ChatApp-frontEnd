@@ -92,9 +92,9 @@ console.log("messages",messages)
 
             <div style={{height:"90vh",overflow:"scroll",overflowX: "hidden"}}>
             <ul>
-                {messages.map((text, index) => {return (
+                {messages.map((text:any, index:any) => {return (
 
-                    <div style={{textAlign:text.user === user ? "right" :"left"}}>
+                    <div style={{textAlign:text.user === user ? "right" :"left"}} key={index}>
                         {/*{text?.type === "new joined" && text.user !== user && <div style={{textAlign:"center"}}>{user} joined the chat</div> }*/}
 <div style={{display:"flex",justifyContent:text.user === user ? "right" :"left",alignItems:"baseline",padding:"10px 2px"}}>
     {text?.type !== "new joined" && text?.user && text.user !== user && <Avatar>{text.user.slice(0,1).toUpperCase()}</Avatar>}
