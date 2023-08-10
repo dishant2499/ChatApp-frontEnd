@@ -17,7 +17,7 @@ import Popover from '@mui/material/Popover';
 
 
      // Create a Socket.IO instance and connect to the server
-     const socket = io('http://localhost:4001');
+     const socket = io('https://chatapp-backend-qd3r.onrender.com');
 const user = router.query.data
      console.log("router",router.query.data)
      // Listen for messages from the server
